@@ -9,7 +9,7 @@ If you have imported the dummy database (`database-dummy-data.sql`), use the fol
 
 | Role | Email | Password |
 | :--- | :--- | :--- |
-| **Administrator** | `admin@porcitrack.com` | `admin123` |
+| **Administrator** | `admin@gmail.com` | `12345678` |
 | **Worker View (With Data)** | `user1@gmail.com` | `12345678` |
 
 ## 🚀 Key Features

@@ -78,8 +78,8 @@ Your application will be available at `http://localhost:8000`.
 If you ran the seeders (`php artisan migrate --seed`), you can log in using the following default accounts:
 
 **Admin Account:**
-- Email: `admin@swineforge.com`
-- Password: `password`
+- Email: `admin@gmail.com`
+- Password: `12345678`
 
 **Worker Account:**
 - Email: `user1@gmail.com`
