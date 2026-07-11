@@ -2,12 +2,23 @@
 
 SwineForge is a comprehensive farm management system designed for modern piggery operations. It features real-time livestock tracking, inventory management, and an offline-first synchronization engine for field workers.
 
+---
+
+## 👨‍💻 Default Demo Credentials
+If you have imported the dummy database (`database-dummy-data.sql`), use the following accounts to see the fully populated views:
+
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Administrator** | `admin@porcitrack.com` | `admin123` |
+| **Worker View (With Data)** | `user1@gmail.com` | *(your configured firebase password)* |
+
 ## 🚀 Key Features
 - **Live Analytics Dashboard**: 360° visibility over farm performance.
 - **Offline-First Workflow**: Workers can log check-ins and medical data without internet.
 - **Critical Alert System**: Immediate escalation of animal health emergencies.
 - **Nutritional Management**: Feed formula building and inventory tracking.
 - **QR Tracking**: Individual pig record access via mobile scanning.
+- **Real-time Synchronization**: Built with Firebase for instantaneous data updates without page reloads.
 
 ## 🛠 Tech Stack
 - **Backend**: Laravel 12 / PHP 8.4
@@ -17,6 +28,7 @@ SwineForge is a comprehensive farm management system designed for modern piggery
 
 ## 📚 Documentation
 - **[Database Schema & Architecture](DATABASE.md)**: Detailed ERD and table references.
+- **[Installation Guide](DOCUMENTATION.md)**: Step-by-step setup guide for buyers.
 
 ---
 
@@ -36,13 +48,13 @@ Follow these steps carefully to set up the project on your local machine:
 4. **Environment Setup**:
    - Create a copy of the environment file: `cp .env.example .env`
    - Generate application key: `php artisan key:generate`
-   - **Important**: Create a database named `porcitrack` in your MySQL server (Laragon/XAMPP).
+   - **Important**: Create a database named `swineforge` (or your preferred name) in your MySQL server.
 5. **Database Initialization**:
-   - Run migrations and seeders:
+   - For an instant setup with dummy data, import the `database-dummy-data.sql` file into your database manager.
+   - For a fresh slate, run migrations:
      ```bash
-     php artisan migrate:fresh --seed
+     php artisan migrate
      ```
-     *Note: Avoid importing `structure.sql` or `backup.sql` directly as they may be outdated. Use migrations for the latest schema.*
 6. **Compile Assets**:
    ```bash
    npm run build
@@ -54,22 +66,7 @@ Follow these steps carefully to set up the project on your local machine:
 
 ---
 
-## 🔑 Default Credentials
-
-After running `php artisan db:seed`, you can log in with:
-
-| Role | Email | Password |
-| :--- | :--- | :--- |
-| **Administrator** | `admin@porcitrack.com` | `admin123` |
-| **Farm Worker** | `worker@porcitrack.com` | `password123` |
-
----
-
 ## ⚠️ Troubleshooting
 
-- **403 Unauthorized**: This happens if your account doesn't have a role assigned. Use the credentials above or register a new account ensuring you select a role.
+- **403 Unauthorized**: This happens if your account doesn't have a role assigned. Register a new account ensuring you select a role or use the default accounts above.
 - **Vite/Manifest Error**: Run `npm install && npm run build` to ensure assets are compiled.
-- **Missing Columns**: If you imported the SQL files instead of running migrations, the `users` table will be missing the `role` and `status` columns. Run `php artisan migrate:fresh` to fix this.
-
----
-*For academic review and system testing.*
