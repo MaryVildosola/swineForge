@@ -82,8 +82,8 @@ If you ran the seeders (`php artisan migrate --seed`), you can log in using the 
 - Password: `password`
 
 **Worker Account:**
-- Email: `worker@swineforge.com`
-- Password: `password`
+- Email: `user1@gmail.com`
+- Password: `password` (or your existing password)
 
 ---
 
