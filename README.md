@@ -10,7 +10,7 @@ If you have imported the dummy database (`database-dummy-data.sql`), use the fol
 | Role | Email | Password |
 | :--- | :--- | :--- |
 | **Administrator** | `admin@porcitrack.com` | `admin123` |
-| **Worker View (With Data)** | `user1@gmail.com` | *(your configured firebase password)* |
+| **Worker View (With Data)** | `user1@gmail.com` | `12345678` |
 
 ## 🚀 Key Features
 - **Live Analytics Dashboard**: 360° visibility over farm performance.

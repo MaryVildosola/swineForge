@@ -83,7 +83,7 @@ If you ran the seeders (`php artisan migrate --seed`), you can log in using the 
 
 **Worker Account:**
 - Email: `user1@gmail.com`
-- Password: `password` (or your existing password)
+- Password: `12345678`
 
 ---
 
